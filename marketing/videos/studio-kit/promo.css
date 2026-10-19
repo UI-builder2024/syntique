@@ -1,0 +1,152 @@
+/* Brand promo layouts. .land = 1920x1080, .vert = 1080x1920 (Instagram safe area:
+   x 72–950, y 269–1498 — top 14%, bottom 22%, right 12% kept free of text). */
+
+#bg .glow { width: 900px; height: 900px; }
+#g1 { background: rgba(61, 59, 255, 0.55); left: -200px; top: -250px; }
+#g2 { background: rgba(61, 59, 255, 0.35); right: -300px; bottom: -350px; }
+#bg .blueprint { opacity: 0.6; }
+#grain { z-index: 50; }
+#grain .grain { animation: none; }
+
+/* HUD */
+#hud { z-index: 40; pointer-events: none; }
+#rail { position: absolute; display: block; height: 3px; background: var(--volt); transform-origin: 0 50%; }
+.land #rail { left: 120px; right: 120px; top: 104px; opacity: 0.8; }
+.vert #rail { left: 72px; width: 878px; top: 330px; }
+
+.kicker { color: var(--volt); font-size: 24px; }
+.w.hl { position: relative; }
+.w.hl > span { color: var(--volt); }
+.uline { position: absolute; left: 0; right: 0; bottom: 0.03em; height: 0.06em; background: var(--volt); display: block; transform-origin: 0 50%; }
+.volt { color: var(--volt); }
+
+/* ---------- hook ---------- */
+#s-hook { display: flex; flex-direction: column; justify-content: center; }
+.land #s-hook { padding: 0 120px; }
+.land #hk-1 { font-size: 150px; max-width: 1500px; }
+.land #hk-2 { font-size: 120px; margin-top: 28px; }
+.land #hk-k { margin-bottom: 40px; }
+.vert #s-hook { padding: 0 130px 0 72px; }
+.vert #hk-1 { font-size: 136px; }
+.vert #hk-2 { font-size: 112px; margin-top: 40px; }
+.vert #hk-k { margin-bottom: 44px; }
+
+/* ---------- sting ---------- */
+#s-sting { display: flex; flex-direction: column; align-items: center; justify-content: center; }
+#st-flash { position: absolute; left: 50%; top: 50%; width: 1400px; height: 1400px; margin: -700px 0 0 -700px; border-radius: 50%;
+  background: radial-gradient(circle, rgba(61, 59, 255, 0.85), rgba(61, 59, 255, 0) 62%); }
+#st-mark .syn-mark { display: block; }
+#st-word { letter-spacing: -0.055em; }
+#st-tag { color: var(--signal-soft); }
+.land #st-mark .syn-mark { width: 230px; height: 230px; }
+.land #st-word { font-size: 210px; margin-top: 20px; }
+.land #st-tag { font-size: 72px; margin-top: 10px; }
+.vert #st-mark .syn-mark { width: 260px; height: 260px; }
+.vert #st-word { font-size: 200px; margin-top: 24px; }
+.vert #st-tag { font-size: 64px; margin-top: 12px; text-align: center; max-width: 840px; }
+
+/* ---------- positioning ---------- */
+#ps-ribbon { position: absolute; left: -10%; right: -10%; overflow: hidden; transform: rotate(-6deg); opacity: 0; }
+#ps-track { display: flex; gap: 32px; width: max-content; }
+#ps-track .rb { display: block; border-radius: 14px; }
+#ps-shade { position: absolute; inset: 0; background: radial-gradient(ellipse at 30% 40%, rgba(11, 11, 15, 0.94) 35%, rgba(11, 11, 15, 0.45) 100%); }
+#ps-lead { color: var(--signal-soft); }
+#ps-stack .display { line-height: 0.95; }
+#ps-geo-k { color: var(--signal-soft); }
+.chip { display: inline-block; border: 3px solid rgba(243, 240, 232, 0.45); border-radius: 999px; color: var(--paper); font-weight: 600; }
+.land #ps-ribbon { top: 660px; }
+.land #ps-track .rb { width: 480px; height: 300px; }
+.land #ps-lead { position: absolute; left: 120px; top: 170px; font-size: 64px; }
+.land #ps-stack { position: absolute; left: 120px; top: 270px; }
+.land #ps-stack .display { font-size: 168px; }
+.land #ps-geo { position: absolute; right: 120px; bottom: 120px; text-align: right; }
+.land #ps-geo-k { font-size: 44px; margin-bottom: 14px; }
+.land .chip { font-size: 38px; padding: 12px 30px; margin-left: 12px; }
+.vert #ps-ribbon { top: 1330px; }
+.vert #ps-track .rb { width: 420px; height: 262px; }
+.vert #ps-lead { position: absolute; left: 72px; top: 400px; font-size: 64px; }
+.vert #ps-stack { position: absolute; left: 72px; top: 500px; }
+.vert #ps-stack .display { font-size: 150px; }
+.vert #ps-geo { position: absolute; left: 72px; top: 1080px; width: 860px; }
+.vert #ps-geo-k { font-size: 48px; margin-bottom: 18px; }
+.vert .chip { font-size: 40px; padding: 12px 30px; margin: 0 14px 16px 0; }
+
+/* ---------- case studies ---------- */
+.case .panel { position: absolute; inset: 0; background: var(--acc); }
+.case .panel::after { content: ""; position: absolute; inset: 0;
+  background: radial-gradient(ellipse at 75% 40%, rgba(255, 255, 255, 0.22), rgba(255, 255, 255, 0) 60%); }
+.case .devices { position: absolute; }
+.case .cs-copy { position: absolute; color: var(--acc-ink); }
+.tag { font-family: "Instrument Serif", serif; font-style: italic; font-weight: 400; letter-spacing: -0.01em; line-height: 1.1; }
+.case .cs-k { font-size: 38px; }
+.case .cs-name { letter-spacing: -0.05em; }
+.case .cs-cap { font-weight: 600; letter-spacing: -0.02em; }
+.case .cs-stat { display: flex; align-items: baseline; gap: 22px; margin-top: 28px; padding-top: 22px; border-top: 3px solid currentColor; }
+.case .cs-stat span { font-weight: 500; opacity: 0.9; }
+.case .browser .shot { transform-origin: 50% 0; }
+.land .case .devices { left: 860px; top: 150px; width: 1000px; height: 800px; }
+.land .case .cs-browser { left: 0; top: 0; width: 1000px; height: 669px; }
+.land .case .cs-phone { left: -110px; top: 300px; width: 270px; height: 584px; border-width: 10px; border-radius: 46px; }
+.land .case .cs-copy { left: 120px; top: 230px; width: 700px; }
+.land .case .cs-name { font-size: 132px; margin-top: 26px; }
+.land .case .cs-cap { font-size: 44px; line-height: 1.15; margin-top: 28px; }
+.land .case .cs-stat b { font-size: 96px; }
+.land .case .cs-stat span { font-size: 28px; max-width: 360px; }
+.vert .case .devices { left: 72px; top: 690px; width: 878px; height: 640px; }
+.vert .case .cs-browser { left: 0; top: 0; width: 800px; height: 535px; }
+.vert .case .cs-phone { left: 590px; top: 70px; width: 262px; height: 566px; border-width: 10px; border-radius: 46px; }
+.vert .case .cs-copy { left: 72px; top: 350px; width: 860px; height: 1150px; }
+.vert .case .cs-name { font-size: 112px; margin-top: 22px; }
+.vert .case .cs-cap { position: absolute; left: 0; top: 1000px; width: 860px; font-size: 46px; line-height: 1.12; }
+/* stat rides on a solid ink sticker over the devices so it always reads */
+.vert .case .cs-stat { position: absolute; left: -8px; top: 790px; margin: 0; padding: 18px 28px; border: 0; gap: 18px;
+  background: var(--ink); color: var(--paper); border-radius: 22px; transform: rotate(-2deg); max-width: 620px;
+  box-shadow: 0 30px 60px -20px rgba(0, 0, 0, 0.5); }
+.vert .case .cs-stat b { font-size: 76px; color: var(--volt); }
+.vert .case .cs-stat span { font-size: 26px; max-width: 380px; }
+
+/* ---------- process ---------- */
+#s-proc .proc-bg { position: absolute; inset: 0; background: var(--ink); }
+#pr-cap { color: var(--signal-soft); }
+#pr-list { list-style: none; }
+#pr-list li { display: flex; align-items: baseline; gap: 24px; }
+#pr-list .label { color: var(--fog); font-size: 22px; }
+#pr-list b { display: inline-block; }
+.land #pr-cap { position: absolute; left: 120px; top: 170px; font-size: 60px; }
+.land #pr-list { position: absolute; left: 120px; top: 300px; width: 1680px; display: grid; grid-template-columns: 1fr 1fr; grid-template-rows: repeat(3, auto); grid-auto-flow: column; column-gap: 80px; }
+.land #pr-list b { font-size: 176px; line-height: 1.0; }
+.vert #pr-cap { position: absolute; left: 72px; top: 400px; font-size: 58px; width: 860px; }
+.vert #pr-list { position: absolute; left: 72px; top: 560px; }
+.vert #pr-list b { font-size: 136px; line-height: 1.0; }
+
+/* ---------- CTA ---------- */
+#s-cta { display: flex; flex-direction: column; align-items: center; justify-content: center; color: var(--ink); text-align: center; }
+#s-cta .paper { position: absolute; inset: 0; background: var(--paper); }
+#s-cta > *:not(.paper) { position: relative; }
+#ct-2 { color: var(--signal); line-height: 1; }
+#ct-url { display: inline-flex; align-items: center; gap: 18px; background: var(--ink); color: var(--paper); border-radius: 999px; font-weight: 600; }
+#ct-url em { font-style: normal; color: var(--volt); display: inline-block; }
+#ct-meta { color: #4a4a55; display: flex; align-items: center; gap: 14px; }
+#ct-meta i { width: 14px; height: 14px; border-radius: 50%; background: #1aa35a; display: inline-block; }
+.land #ct-mark .syn-mark { width: 150px; height: 150px; display: block; }
+.land #ct-1 { font-size: 190px; margin-top: 30px; }
+.land #ct-2 { font-size: 190px; }
+.land #ct-url { font-size: 52px; padding: 22px 54px; margin-top: 50px; }
+.land #ct-meta { font-size: 22px; margin-top: 34px; }
+.vert #ct-mark .syn-mark { width: 170px; height: 170px; display: block; }
+.vert #ct-1 { font-size: 170px; margin-top: 30px; }
+.vert #ct-2 { font-size: 170px; }
+.vert #ct-url { font-size: 54px; padding: 22px 54px; margin-top: 56px; }
+.vert #ct-meta { font-size: 21px; margin-top: 36px; max-width: 860px; flex-wrap: wrap; justify-content: center; }
+.vert #s-cta, .vert #s-sting { padding: 0 130px 0 72px; }
+
+/* hook: oversized ghost trace of the S mark, drifting behind the line */
+#hk-ghost { position: absolute; pointer-events: none; opacity: 0.16; }
+#hk-ghost .syn-mark { width: 100%; height: 100%; display: block; }
+.land #hk-ghost { right: -160px; top: 60px; width: 1000px; height: 1000px; }
+.vert #hk-ghost { right: -330px; top: 1020px; width: 1000px; height: 1000px; }
+
+.case.on-dark .panel::after { background: rgba(11, 11, 15, 0.22); }
+
+/* landscape: the screenshot ribbon runs behind the region chips — deepen the shade on that side */
+.land #ps-shade { background: linear-gradient(110deg, rgba(11, 11, 15, 0) 45%, rgba(11, 11, 15, 0.82) 80%), radial-gradient(ellipse at 30% 40%, rgba(11, 11, 15, 0.94) 35%, rgba(11, 11, 15, 0.45) 100%); }
